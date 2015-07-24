@@ -1,16 +1,32 @@
 td{
-	background-color: grey;
 	width: 150px;
 	height: 150px;
+	background-color: grey;
+}
+
+h1{
+	font-family: Arial;
+	color: grey;
+}
+
+table{
+	margin: auto;
+}
+div{
+	text-align: center;
 }
 
 /*html{
 	background-color: orange;
 }*/
-.blue{
+/*.blue{
 	background-color: blue;
 }
 
 .red{
 	background-color: red;
 }
+
+.grey{
+	background-color: grey;
+}*/
