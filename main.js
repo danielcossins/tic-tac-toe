@@ -1,5 +1,7 @@
 var turn = 1;
 
+var over = false;
+
 var $reset = $('#button');
 var message = document.getElementById('message');
 
@@ -273,22 +275,26 @@ function checkIfWin(){
   	blueWins=true;
   }
 
-  if(redWins){
-  	//alert("Red Wins!");
-  	$('p#red').css("display", "inline");
-  	//reset();
-  }
-  if(blueWins){
-  	//alert("Blue Wins!");
-    $('p#blue').css("display", "inline");
-  	//reset();
-  }
-
   if(turn%2===1){
     message.innerHTML = "Red's turn";
   }
   else{
   	message.innerHTML = "Blue's turn";
+  }
+
+  if(redWins && over===false){
+  	//alert("Red Wins!");
+  	$('p#red').css("display", "inline");
+  	message.innerHTML = "!!!!!!!!!!!!!!!!";
+  	over=true;
+  	//reset();
+  }
+  if(blueWins && over===false){
+  	//alert("Blue Wins!");
+    $('p#blue').css("display", "inline");
+    message.innerHTML = "!!!!!!!!!!!!!!!!";
+    over=true;
+  	//reset();
   }
 
   if(!redWins && !blueWins && turn===10){
@@ -304,6 +310,7 @@ $reset.click(function(){
 function reset(){
 	$('td').css('background-color', 'grey');
   $('p').css("display", "none");
+  message.innerHTML = "Red goes first";
 	count.r1=0;
 	count.r2=0;
 	count.r3=0;
@@ -323,6 +330,7 @@ function reset(){
 	clicked8=false;
 	clicked9=false;
 
+  over=false;
 	turn=1;
 	// message.innerHTML = "Red goes first"
 }
