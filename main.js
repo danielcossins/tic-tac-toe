@@ -1,5 +1,9 @@
 var turn = 1;
 
+var $reset = $('#button');
+//var $message = $('#message');
+var message = document.getElementById('message');
+
 var $1 = $('#1');
 var $2 = $('#2');
 var $3 = $('#3');
@@ -225,8 +229,8 @@ $9.click(function(){
 });
 
 function checkIfWin(){
-	var redWins = false;
-	var blueWins = false;
+  var redWins = false;
+  var blueWins = false;
   if(count.r1===3){
   	redWins=true;
   } else if(count.r1===-3){
@@ -279,8 +283,22 @@ function checkIfWin(){
   	reset();
   }
 
-  console.log(count);
+  if(turn%2===1){
+    message.innerHTML = "Red's turn";
+  }
+  else{
+  	message.innerHTML = "Blue's turn";
+  }
+
+  if(!redWins && !blueWins && turn===10){
+  	alert("It's a tie!");
+  	reset();
+  }
 }
+
+$reset.click(function(){
+	reset();
+});
 
 function reset(){
 	$('td').css('background-color', 'grey');
@@ -304,4 +322,5 @@ function reset(){
 	clicked9=false;
 
 	turn=1;
+	// message.innerHTML = "Red goes first"
 }
