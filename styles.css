@@ -1,3 +1,16 @@
+body {
+	background-image: url("gametime.jpg")
+}
+
+div{
+	text-align: center;
+}
+
+table {
+	background-color: white;
+	margin: auto;
+}
+
 td{
 	width: 150px;
 	height: 150px;
@@ -5,28 +18,30 @@ td{
 }
 
 h1{
-	font-family: Arial;
-	color: grey;
-}
-
-table{
+	border-radius: 20px;
+	max-width: 300px;
 	margin: auto;
 }
-div{
-	text-align: center;
+
+h3 {
+	border-radius: 20px;
+	max-width: 200px;
+	margin: auto;
 }
 
-/*html{
-	background-color: orange;
-}*/
-/*.blue{
-	background-color: blue;
+h2 {
+	border-radius: 80%;
+	width: 100px;
+	margin: auto;
+	padding: 10px;
+	padding-top: auto;
 }
 
-.red{
-	background-color: red;
-}
+h1, h2, h3 {
+	font-family: Arial;
+	color: midnightblue;
+	background-color: white;
+	line-height: 1.5em;
+	border: 2px solid midnightblue;
 
-.grey{
-	background-color: grey;
-}*/
+}
