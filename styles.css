@@ -37,11 +37,37 @@ h2 {
 	padding-top: auto;
 }
 
+h2:hover{
+	cursor: pointer;
+}
+
 h1, h2, h3 {
 	font-family: Arial;
 	color: midnightblue;
 	background-color: white;
 	line-height: 1.5em;
 	border: 2px solid midnightblue;
+}
 
+#red{
+	background-color: red;
+	font-family: Arial;
+	color: white;
+	display: inline;
+	width: 300px;
+	font-size: 4em;
+	height: 200px;
+	border-radius: 10%;
+	display: none;
+}
+#blue{
+  background-color: blue;
+  font-family: Arial;
+	color: white;
+	display: inline;
+	width: 300px;
+	font-size: 4em;
+	height: 200px;
+	border-radius: 10%;
+	display: none;
 }

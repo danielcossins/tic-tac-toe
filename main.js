@@ -1,7 +1,6 @@
 var turn = 1;
 
 var $reset = $('#button');
-//var $message = $('#message');
 var message = document.getElementById('message');
 
 var $1 = $('#1');
@@ -275,12 +274,14 @@ function checkIfWin(){
   }
 
   if(redWins){
-  	alert("Red Wins!");
-  	reset();
+  	//alert("Red Wins!");
+  	$('p#red').css("display", "inline");
+  	//reset();
   }
   if(blueWins){
-  	alert("Blue Wins!");
-  	reset();
+  	//alert("Blue Wins!");
+    $('p#blue').css("display", "inline");
+  	//reset();
   }
 
   if(turn%2===1){
@@ -302,6 +303,7 @@ $reset.click(function(){
 
 function reset(){
 	$('td').css('background-color', 'grey');
+  $('p').css("display", "none");
 	count.r1=0;
 	count.r2=0;
 	count.r3=0;
