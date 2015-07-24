@@ -71,6 +71,17 @@ h1, h2, h3 {
 	border-radius: 10%;
 	display: none;
 }
+#tie{
+	background-color: green;
+	font-family: Arial;
+	color: white;
+	display: inline;
+	width: 300px;
+	font-size: 4em;
+	height: 200px;
+	border-radius: 10%;
+	display: none;
+}
 
 p {   
   animation-duration: 300ms;

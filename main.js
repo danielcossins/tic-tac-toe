@@ -275,31 +275,30 @@ function checkIfWin(){
   	blueWins=true;
   }
 
-  if(turn%2===1){
+  if(turn%2===1 && over===false){
     message.innerHTML = "Red's turn";
   }
-  else{
+  else if(over===false){
   	message.innerHTML = "Blue's turn";
   }
 
   if(redWins && over===false){
-  	//alert("Red Wins!");
-  	$('p#red').css("display", "inline");
+  	$('#red').css("display", "inline");
   	message.innerHTML = "!!!!!!!!!!!!!!!!";
   	over=true;
-  	//reset();
   }
   if(blueWins && over===false){
-  	//alert("Blue Wins!");
-    $('p#blue').css("display", "inline");
+    $('#blue').css("display", "inline");
     message.innerHTML = "!!!!!!!!!!!!!!!!";
     over=true;
-  	//reset();
   }
 
   if(!redWins && !blueWins && turn===10){
-  	alert("It's a tie!");
-  	reset();
+  	//alert("It's a tie!");
+    $('#tie').css("display", "inline");
+    message.innerHTML = "!!!!!!!!!!!!!!!!";
+    over=true;
+  	//reset();
   }
 }
 
@@ -332,5 +331,4 @@ function reset(){
 
   over=false;
 	turn=1;
-	// message.innerHTML = "Red goes first"
 }
